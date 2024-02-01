@@ -1,6 +1,6 @@
 <ng-template #loading>
   <div class="alert alert-info text-center">
-    Espere por favor
+    Please wait...
   </div>
 </ng-template>
 
@@ -8,30 +8,30 @@
 <div *ngIf="country; else loading">
   <div class="row">
     <div class="col-12">
-      <h2>País: <strong>{{country.name.common}}</strong></h2>
+      <h2>Country: <strong>{{country.name.common}}</strong></h2>
       <hr>
     </div>
   </div>
 
   <div class="row">
     <div class="col-4">
-      <h3>Bandera</h3>
+      <h3>Flag</h3>
       <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail">
     </div>
     <div class="col">
       <ul class="list-group">
         <li class="list-group-item">
-          <strong>Población:</strong> {{ country.population | number }}
+          <strong>Population:</strong> {{ country.population | number }}
         </li>
         <li class="list-group-item">
-          <strong>Código:</strong> {{ country.cca3 }}
+          <strong>Code:</strong> {{ country.cca3 }}
         </li>
       </ul>
     </div>
   </div>
   <div class="row mt-2">
     <div class="col">
-      <h3>Traducciones</h3>
+      <h3>Translations</h3>
       <div class="d-flex flex-wrap">
         <span class="badge bg-primary m-1">{{ country.translations['ara'].common }}</span>
         <span class="badge bg-primary m-1">{{ country.translations['bre'].common }}</span>
